@@ -9,3 +9,9 @@ THIS REPOSITORY CONTAINS:
 - NO MUTABLE LOGIC
 
 FOR DEMONSTRATION AND TESTING ONLY.
+
+---
+AUTHORITATIVE LINKS:
+- SPEC: https://github.com/Verifrax/VERIFRAX-SPEC
+- PROFILES: https://github.com/Verifrax/VERIFRAX-PROFILES
+- VERIFIER: https://github.com/Verifrax/VERIFRAX-verify
