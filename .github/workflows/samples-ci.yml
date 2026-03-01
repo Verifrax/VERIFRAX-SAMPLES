@@ -24,6 +24,12 @@ jobs:
           {"name":"verifrax-samples","private":true,"version":"0.0.0"}
           JSON
 
+      - name: Ensure output dir exists
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p samples/00_minimal/expected
+
       - name: Run VERIFRAX minimal sample
         uses: Verifrax/VERIFRAX@8d7571fda2965477f2172e60ac4f0c8948fbdec0
         with:
