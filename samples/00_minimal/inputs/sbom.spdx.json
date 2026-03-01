@@ -1,0 +1,9 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "verifrax-samples-minimal",
+  "dataLicense": "CC0-1.0",
+  "documentNamespace": "https://verifrax.net/spdx/verifrax-samples-minimal",
+  "creationInfo": { "created": "2024-01-01T00:00:00Z", "creators": ["Tool: verifrax-samples"] },
+  "packages": []
+}

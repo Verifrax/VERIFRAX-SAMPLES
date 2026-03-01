@@ -1,0 +1,11 @@
+{
+  "rules": [
+    {
+      "id": "ALWAYS_PASS_IF_ARTIFACT_HASH_EXISTS",
+      "level": "fail",
+      "require": [
+        { "path": "artifact_hash", "op": "exists" }
+      ]
+    }
+  ]
+}
