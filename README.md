@@ -1,17 +1,11 @@
-# VERIFRAX SAMPLES
+# VERIFRAX-SAMPLES
 
-CANONICAL, READ-ONLY SAMPLE ARTIFACTS FOR VERIFRAX.
+Executable minimal examples for `Verifrax/VERIFRAX`.
 
-THIS REPOSITORY CONTAINS:
-- SAMPLE verifrax.proof.v1 DOCUMENTS
-- EXPECTED VERIFIER OUTCOMES
-- NO ENGINE CODE
-- NO MUTABLE LOGIC
+## Samples
 
-FOR DEMONSTRATION AND TESTING ONLY.
+- `samples/00_minimal` — minimal policy + minimal SPDX SBOM → produces `verifrax.seal.json` in CI.
 
----
-AUTHORITATIVE LINKS:
-- SPEC: https://github.com/Verifrax/VERIFRAX-SPEC
-- PROFILES: https://github.com/Verifrax/VERIFRAX-PROFILES
-- VERIFIER: https://github.com/Verifrax/VERIFRAX-verify
+## Pinning
+
+CI pins VERIFRAX action by immutable SHA stored in `.verifrax/verifrax.sha`.

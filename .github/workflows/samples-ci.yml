@@ -1,0 +1,36 @@
+name: samples-ci
+
+on:
+  pull_request:
+  push:
+    branches: [ main ]
+
+jobs:
+  minimal:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Ensure package.json (VERIFRAX action expects it)
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -f package.json || cat > package.json <<'JSON'
+          {"name":"verifrax-samples","private":true,"version":"0.0.0"}
+          JSON
+
+      - name: Run VERIFRAX minimal sample
+        uses: Verifrax/VERIFRAX@8d7571fda2965477f2172e60ac4f0c8948fbdec0
+        with:
+          mode: audit
+          policy_path: ${{ github.workspace }}/samples/00_minimal/inputs/policy.json
+          sbom_path: ${{ github.workspace }}/samples/00_minimal/inputs/sbom.spdx.json
+          out_path: ${{ github.workspace }}/samples/00_minimal/expected/verifrax.seal.json
+
+      - name: Assert seal exists + decision pass
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -s samples/00_minimal/expected/verifrax.seal.json
+          head -n 5 samples/00_minimal/expected/verifrax.seal.json || true
+          node -e 'const j=require("./samples/00_minimal/expected/verifrax.seal.json"); if(j.decision!=="pass") process.exit(1); console.log("OK decision=pass");'
