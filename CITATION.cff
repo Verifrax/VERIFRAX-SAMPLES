@@ -1,0 +1,8 @@
+cff-version: 1.2.0
+title: "VERIFRAX-SAMPLES"
+message: "Cite this repository when referencing runnable examples for VERIFRAX."
+type: software
+authors:
+  - name: "Verifrax"
+repository-code: "https://github.com/Verifrax/VERIFRAX-SAMPLES"
+license: "Proprietary"
