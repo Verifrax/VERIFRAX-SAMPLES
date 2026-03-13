@@ -1,16 +1,46 @@
 # VERIFRAX-SAMPLES
 
-Executable minimal examples for `Verifrax/VERIFRAX`.
+## Purpose
 
-## Samples
+Reference samples and fixtures for Verifrax inputs/outputs.
 
-- `samples/00_minimal` — minimal policy + minimal SPDX SBOM → produces `verifrax.seal.json` in CI.
+## Status
 
-## Pinning
+- **Stability**: Experimental
+- **SemVer**: Not guaranteed until v1.0.0
+- **Security**: See **Security** section below
 
-CI pins VERIFRAX action by immutable SHA stored in `.verifrax/verifrax.sha`.
+## Scope
 
-## Layout
-- `samples/00-minimal/`  : smallest possible end-to-end run
-- `samples/01-profiles/` : profile overlay examples
-- `samples/02-bundle/`   : evidence bundle examples
+- What this repo is responsible for
+- What it explicitly does **not** do
+
+## Quickstart
+
+```bash
+# clone
+git clone https://github.com/Verifrax/VERIFRAX-SAMPLES.git
+cd VERIFRAX-SAMPLES
+
+# install (adjust if needed)
+# (placeholder) npm install / pnpm install / go test ./... / etc.
+```
+
+## Repository layout
+
+- `/` Root sources
+- `/.github/` Issue + PR templates
+- `/docs/` Documentation (if present)
+
+## Security
+
+- Report vulnerabilities privately: **security@verifrax.org**
+- Do **not** open public issues for sensitive findings
+
+## Contributing
+
+See `CONTRIBUTING.md`.
+
+## License
+
+MIT. See `LICENSE`.
